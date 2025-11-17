@@ -738,7 +738,7 @@ export default {
                 overflow: 'auto',
                 // Global editor colors
                 color: this.content.textColor || '#000000',
-                backgroundColor: this.content.backgroundColor || '#ffffff',
+                backgroundColor: this.content.backgroundColor || 'transparent',
                 // H1
                 '--h1-fontSize': this.content.h1.fontSize,
                 '--h1-fontFamily': this.content.h1.fontFamily,

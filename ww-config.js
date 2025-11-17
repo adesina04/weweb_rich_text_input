@@ -562,7 +562,7 @@ export default {
                 en: 'Background color',
             },
             type: 'Color',
-            defaultValue: '#ffffff',
+            defaultValue: 'transparent',
             states: true,
             classes: true,
             responsive: true,
