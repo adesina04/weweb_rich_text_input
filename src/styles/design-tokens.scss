@@ -1,0 +1,267 @@
+/**
+ * Design Tokens for Modern Rich Text Editor
+ * Provides consistent styling across all components
+ */
+
+:root {
+    /* ===== Colors ===== */
+
+    /* Editor Colors */
+    --editor-bg: #ffffff;
+    --editor-text: #1a1a1a;
+    --editor-text-secondary: #6b7280;
+    --editor-text-muted: #9ca3af;
+
+    /* Toolbar Colors */
+    --toolbar-bg: #fafafa;
+    --toolbar-border: #e5e7eb;
+    --toolbar-button-color: rgba(0, 0, 0, 0.7);
+    --toolbar-button-hover: rgba(0, 0, 0, 0.05);
+    --toolbar-button-active-bg: rgba(59, 130, 246, 0.1);
+    --toolbar-button-active-color: #3b82f6;
+    --toolbar-button-focus: #3b82f6;
+    --toolbar-separator-color: rgba(0, 0, 0, 0.1);
+    --toolbar-select-bg: #ffffff;
+    --toolbar-select-hover: #f9fafb;
+    --toolbar-scrollbar: rgba(0, 0, 0, 0.2);
+    --toolbar-scrollbar-hover: rgba(0, 0, 0, 0.3);
+
+    /* Slash Menu Colors */
+    --slash-menu-bg: #ffffff;
+    --slash-menu-border: rgba(0, 0, 0, 0.1);
+    --slash-item-hover: rgba(0, 0, 0, 0.05);
+    --slash-item-title: #1a1a1a;
+    --slash-item-description: #6b7280;
+    --slash-input-bg: #f9fafb;
+    --slash-input-color: #1a1a1a;
+    --slash-input-placeholder: #9ca3af;
+    --slash-input-focus: #3b82f6;
+    --slash-scrollbar: rgba(0, 0, 0, 0.2);
+    --slash-scrollbar-hover: rgba(0, 0, 0, 0.3);
+    --slash-group-label: #6b7280;
+    --slash-empty-color: #9ca3af;
+
+    /* Accent Colors */
+    --accent-primary: #3b82f6;
+    --accent-primary-hover: #2563eb;
+    --accent-success: #10b981;
+    --accent-warning: #f59e0b;
+    --accent-error: #ef4444;
+
+    /* ===== Spacing ===== */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+
+    /* ===== Border Radius ===== */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 9999px;
+
+    /* ===== Transitions ===== */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ===== Typography ===== */
+    --font-size-xs: 11px;
+    --font-size-sm: 13px;
+    --font-size-base: 14px;
+    --font-size-md: 15px;
+    --font-size-lg: 16px;
+    --font-size-xl: 18px;
+    --font-size-2xl: 20px;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+    /* ===== Z-Index ===== */
+    --z-dropdown: 1000;
+    --z-modal: 2000;
+    --z-popover: 9999;
+    --z-tooltip: 10000;
+}
+
+/* ===== Dark Theme ===== */
+:root[data-theme='dark'],
+.dark-theme {
+    /* Editor Colors */
+    --editor-bg: #1a1a1a;
+    --editor-text: #e5e7eb;
+    --editor-text-secondary: #9ca3af;
+    --editor-text-muted: #6b7280;
+
+    /* Toolbar Colors */
+    --toolbar-bg: #262626;
+    --toolbar-border: #404040;
+    --toolbar-button-color: rgba(255, 255, 255, 0.8);
+    --toolbar-button-hover: rgba(255, 255, 255, 0.1);
+    --toolbar-button-active-bg: rgba(59, 130, 246, 0.2);
+    --toolbar-button-active-color: #60a5fa;
+    --toolbar-button-focus: #60a5fa;
+    --toolbar-separator-color: rgba(255, 255, 255, 0.1);
+    --toolbar-select-bg: #1a1a1a;
+    --toolbar-select-hover: #333333;
+    --toolbar-scrollbar: rgba(255, 255, 255, 0.2);
+    --toolbar-scrollbar-hover: rgba(255, 255, 255, 0.3);
+
+    /* Slash Menu Colors */
+    --slash-menu-bg: #1a1a1a;
+    --slash-menu-border: rgba(255, 255, 255, 0.1);
+    --slash-item-hover: rgba(255, 255, 255, 0.1);
+    --slash-item-title: #e5e7eb;
+    --slash-item-description: #9ca3af;
+    --slash-input-bg: #262626;
+    --slash-input-color: #e5e7eb;
+    --slash-input-placeholder: #6b7280;
+    --slash-input-focus: #60a5fa;
+    --slash-scrollbar: rgba(255, 255, 255, 0.2);
+    --slash-scrollbar-hover: rgba(255, 255, 255, 0.3);
+    --slash-group-label: #9ca3af;
+    --slash-empty-color: #6b7280;
+
+    /* Accent Colors */
+    --accent-primary: #60a5fa;
+    --accent-primary-hover: #3b82f6;
+    --accent-success: #34d399;
+    --accent-warning: #fbbf24;
+    --accent-error: #f87171;
+
+    /* Shadows (adjusted for dark theme) */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6), 0 10px 10px rgba(0, 0, 0, 0.4);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Utility Classes ===== */
+
+/* Scrollbar Styling */
+.custom-scrollbar {
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--toolbar-scrollbar);
+        border-radius: var(--radius-sm);
+
+        &:hover {
+            background: var(--toolbar-scrollbar-hover);
+        }
+    }
+}
+
+/* Focus Visible (Accessibility) */
+.focus-visible {
+    &:focus-visible {
+        outline: 2px solid var(--accent-primary);
+        outline-offset: 2px;
+    }
+}
+
+/* Smooth Transitions */
+.transition-all {
+    transition: all var(--transition-base);
+}
+
+.transition-colors {
+    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+/* ===== Component-Specific Tokens ===== */
+
+/* Toolbar Specific */
+.ww-rich-text {
+    --toolbar-button-radius: var(--radius-sm);
+    --toolbar-radius: var(--radius-lg);
+    --toolbar-transition: var(--transition-fast);
+    --toolbar-padding: var(--spacing-sm);
+}
+
+/* Slash Menu Specific */
+.slash-menu-list {
+    --slash-transition: var(--transition-fast);
+}
+
+/* ===== Responsive Breakpoints ===== */
+/* These are CSS custom properties for use in calculations */
+:root {
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    :root {
+        --editor-bg: white;
+        --editor-text: black;
+        --toolbar-bg: transparent;
+        --slash-menu-bg: transparent;
+    }
+
+    .modular-toolbar,
+    .slash-menu-list {
+        display: none !important;
+    }
+}
+
+/* ===== Reduced Motion (Accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-base: 0ms;
+        --transition-slow: 0ms;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== High Contrast Mode (Accessibility) ===== */
+@media (prefers-contrast: high) {
+    :root {
+        --toolbar-border: #000000;
+        --slash-menu-border: #000000;
+        --toolbar-button-hover: rgba(0, 0, 0, 0.15);
+    }
+
+    :root[data-theme='dark'] {
+        --toolbar-border: #ffffff;
+        --slash-menu-border: #ffffff;
+        --toolbar-button-hover: rgba(255, 255, 255, 0.2);
+    }
+}
