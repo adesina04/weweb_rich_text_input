@@ -81,6 +81,10 @@ export default {
             type: String,
             default: '#000000ad',
         },
+        menuBackgroundColor: {
+            type: String,
+            default: '#fafafa',
+        },
         menuPosition: {
             type: String,
             default: 'left',
@@ -154,6 +158,7 @@ export default {
             };
             return {
                 '--menu-color': this.menuColor,
+                '--toolbar-bg': this.menuBackgroundColor,
                 '--menu-hover-bg': this.menuHoverBg || '#eee',
                 '--menu-hover-icon-color': this.menuHoverIconColor || '#000000',
                 'justify-content': justifyMap[this.menuPosition] || 'flex-start',

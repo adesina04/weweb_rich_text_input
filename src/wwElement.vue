@@ -9,6 +9,7 @@
                 :is-editable="isEditable"
                 :show-text-type="content.parameterTextType !== false"
                 :menu-color="content.menuColor"
+                :menu-background-color="content.menuBackgroundColor"
                 :menu-position="content.menuPosition"
                 :menu-hover-bg="content.menuHoverBg"
                 :menu-hover-icon-color="content.menuHoverIconColor"
@@ -683,6 +684,7 @@ export default {
         editorConfig() {
             return {
                 placeholder: wwLib.wwLang.getText(this.content.placeholder),
+                slashPlaceholder: wwLib.wwLang.getText(this.content.slashMenuPlaceholder),
                 autofocus: this.content.autofocus,
                 image: {
                     inline: this.content.img?.inline,
@@ -956,7 +958,15 @@ export default {
                         types: ['heading', 'paragraph'],
                     }),
                     Placeholder.configure({
-                        placeholder: this.editorConfig.placeholder,
+                        placeholder: ({ node, editor }) => {
+                            if (editor.isEmpty) return this.editorConfig.placeholder;
+                            if (node.type.name === 'paragraph' && this.content.enableSlashMenu) {
+                                return this.editorConfig.slashPlaceholder;
+                            }
+                            return null;
+                        },
+                        includeChildren: true,
+                        showOnlyCurrent: true,
                     }),
                     Markdown.configure({ breaks: true }),
                     Image.configure({ ...this.editorConfig.image }),
