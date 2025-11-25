@@ -1,6 +1,7 @@
 {
     "name": "ww-rich-text",
     "version": "3.0.1",
+    "author": "Adesina Samuel <adesinasamuel18@gmail.com>",
     "scripts": {
         "build": "weweb build",
         "serve": "weweb serve"

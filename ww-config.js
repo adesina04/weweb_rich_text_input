@@ -70,7 +70,7 @@ export default {
                 'mentionLabelPath',
             ],
             'enableSlashMenu',
-            'slashMenuInfobox',
+
             [
                 'slash_paragraph',
                 'slash_heading1',
@@ -1829,16 +1829,7 @@ export default {
             bindable: true,
             hidden: content => !content.enableSlashMenu,
         },
-        slashMenuInfobox: {
-            type: 'InfoBox',
-            section: 'settings',
-            options: {
-                icon: 'info',
-                title: { en: 'Slash Commands' },
-                content: { en: 'Type "/" in the editor to trigger the slash command menu for quick block insertion.' },
-            },
-            hidden: content => !content.enableSlashMenu,
-        },
+
         /* Toolbar Item Toggles */
         toolbar_bold: {
             section: 'settings',
